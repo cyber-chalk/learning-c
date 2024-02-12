@@ -1,30 +1,32 @@
 #include <stdio.h>
-#include <math.h>
-
-
-float calculate(float x) {
-    float result = (3 * pow(x, 3)) - (5 * pow(x, 2)) + 6;;
-    return result;
-}
-
-float temp (int f) {
-    float c = (f -32) / 1.8;
-    // printf("%.2f", c);
-    return c;
-}
 
 int main() {
-    // float x;
-    // printf("input x for: 3x^3 - 5x^2 + 6 \n");
-    // scanf("%f", &x);
-    // printf("%.2f \n", calculate(x));
-    // double result = (3.31e-8 * 2.01e-7) * (7.16e-6 * 2.01e-8);
+    int num;
+	
+	int count = 0;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    int origNum = num;
+    printf("You entered: %i\n", num);
 
-    // printf("Result: %e\n", result);
-    // int x = 44;
-    // printf("base 8: %o \n", x);
-    // printf("celcius: %.2f", temp(45));
+	while (origNum != 0) {
+        origNum /= 10;	
+        count++;
+    }
 
+    // Reverse the digits
+    int reversed = 0;
+    while (num != 0) {
+        int digit = num % 10; // gets the last dig
+        reversed = reversed * 10 + digit; // moves any previous digets up 
+		// and adds the new diget to the ones position
+        num /= 10; // moves the ones position into decimal
+    }
+    
+	char formatString[count + 5];
+	sprintf(formatString, "%%0%dd", count);
+	printf("The reversed number is: ");
+    printf(formatString, reversed);
 
     return 0;
 }
