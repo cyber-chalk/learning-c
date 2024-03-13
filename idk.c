@@ -16,11 +16,8 @@ struct date {
 // This is just pseudocode to give you an idea
 // insertNode({1}->{2}, {3}) --> {1}->{2}->{3}
 void insertNode(node *head, node * newNode) {
-  newNode->p = 5;
-  newNode->_node = NULL;
-
-  head->_node = &newNode;
-    
+  
+ 
 }
 
 int main() {
@@ -49,23 +46,21 @@ int main() {
     two.ptr = &three;
     three.ptr = NULL;
     
-    if (three.ptr == NULL) {
-        //printf("Nothing left in the list, bruh.");
-    }
+    // if (three.ptr == NULL) {
+    //     //printf("Nothing left in the list, bruh.");
+    // }
     
     node *head = &one;
-    
     while (head != NULL) {
         printf("The payload is: %d\n",    head->p);
         head = head->ptr;
     }
-    
+
     node four = {.p = 4};
     node* newNodePtr;
-    
     insertNode(head,newNodePtr);
     
-        while (head != NULL) {
+    while (head != NULL) {
         printf("The payload is: %d\n",    head->p);
         head = head->ptr;
     }
