@@ -1,8 +1,9 @@
-typedef struct _stack *stack;
-
-stack create(void);
-void destroy(stack);
-void empty(stack);
-int is_empty(stack);
-void push(stack, int);
-int pop(stack);
+typedef struct _queue *queue;                                                                                                                                      
+queue create(void);                                                                                                                    
+void destroy(queue);                                                                                                                   
+void empty(queue);                                                                                                                     
+int is_empty(queue);                                                                                                                   
+void enqueue(queue, int);                                                                                                              
+int dequeue(queue);                                                                                                                    
+void poll(queue);                                                                                                                      
+                       
