@@ -1,0 +1,33 @@
+1.      Explain what it means for an algorithm to have a time complexity of O(n^3).
+        Provide a simple C code program to demonstrate your explanation.
+
+When an algorithm has a time complexity of 0(n^3) it means that the time it takes to execute the algorithm grows proportional to the cube of the size of the input (n). 
+This indicates that as the size of the input increases, the time taken by the algorithm increases significantly.
+
+example in c:
+
+  for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            for (int k = 0; k < n; k++) {
+                sum += arr[i][j][k];
+            }
+        }
+    }
+
+
+
+2.      Explain a case of worst-case performance of a search on an imbalanced BST
+
+In an imbalanced BST, worst-case performance occurs when the tree is heavily skewed to one side, resembling a linked list. Searching for the maximum (or minimum)
+value requires traversing through all nodes, resulting in a time complexity of O(n), where n is the number of nodes.
+
+3. What is the time complexity of the program
+O(n^2)
+
+
+4. 
+
+Big O notation is essential for comparing algorithms because 
+it provides a standardized way to describe their performance in terms of input size,
+enabling scalability analysis and focusing on dominant terms. Using stopwatches to compare runtime isn't enough because it overlooks hardware and input dependencies
+and offers limited insight into scalability. Big O notation offers a high-level view, crucial for algorithm selection and understanding how performance scales with input size.
